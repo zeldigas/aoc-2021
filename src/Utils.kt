@@ -16,7 +16,7 @@ fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest
  * Transpose lines matrix
  */
 fun <T> List<List<T>>.transpose(): List<List<T>> {
-    return (0 until size).map { index -> this.map { it[index] } }
+    return indices.map { index -> this.map { it[index] } }
 }
 
 typealias Matrix2D = Array<Array<Int>>

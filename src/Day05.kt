@@ -86,8 +86,8 @@ class Line(private val start: Point, private val end: Point) {
 
 class LineBoard(private val field: Matrix2D) {
 
-    val sizeX: Int = field[0].size
-    val sizeY: Int = field.size
+    private val sizeX: Int = field[0].size
+    private val sizeY: Int = field.size
 
     fun register(line: Line): LineBoard {
         return if (line.maxX >= sizeX || line.maxY >= sizeY) {
